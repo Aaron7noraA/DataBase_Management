@@ -1,0 +1,98 @@
+<template name="adminLoginHomePage">
+    <div id="adminLoginHomePage_topRegion">
+        <h2>The Roft 管理員介面</h2>
+        <button id="adminLoginHomePage_viewMeal" class="funcbut">菜單總覽</button>
+        <button id="adminLoginHomePage_viewOrders" class="funcbut">訂單總覽</button>
+        <button id="adminLoginHomePage_viewCustomers" class="funcbut">顧客資料</button>
+        <button id="adminLoginHomePage_manageInv" class="funcbut">庫存管理</button>
+        <button id="adminLoginHomePage_buyInv" class="funcbut">原料訂單</button>
+        <button id="adminLoginHomePage_financeFlow" class="funcbut">帳務紀錄</button>
+        <button id="adminLoginHomePage_logOut" class="funcbut">登出</button>
+    </div>
+
+    <div id="adminLoginHomePage_descRegion">
+        <div id="descRegion_adminViewMeal">
+            <table id="viewMeal_table" width="100%" height="950" border="1">
+                <tr>
+                    <th align="center">順序</th>
+                    <th align="center">品項</th>
+                    <th align="center">品項介紹</th>
+                    <th align="center">價格(份)</th>
+                    <th align="center">圖片連結</th>
+                    <th align="center">操作</th>
+                </tr>
+                {{#each showAllMeal}} {{> adminLoginHomePage_viewMeal}} {{/each}}
+            </table>
+            <button id="adminAddMeal" class="listbut">新增餐點</button>
+        </div>
+        <div id="descRegion_adminViewOrders">
+            <input type="text" id="searchBox" placeholder="搜尋顧客" style="display: inline-block; height: 24px;">
+            <button style="display: inline-block; height: 30px;width: 40px;" id="viewOrders_filter">搜尋</button>
+            <table id="viewOrders_table" width="100%" border="1">
+                <tr>
+                    <th align="center">單號</th>
+                    <th align="center">顧客姓名</th>
+                    <th align="center">訂單內容</th>
+                    <th align="center">訂餐時間</th>
+                    <th align="center">總價</th>
+                    <th align="center">付款情況</th>
+                    <th align="center">出餐情況</th>
+                    <th align="center">處理</th>
+                    <th align="center">操作</th>
+                </tr>
+                {{#each showAllOrders}} {{> adminLoginHomePage_viewOrders}} {{/each}}
+            </table>
+        </div>
+        <div id="descRegion_adminViewCustomers" style="display: none;">
+            
+            
+            <table id="viewCustomers" width="100%" border="1">
+                <tr>
+                    <th align="center">編號</th>
+                    <th align="center">顧客姓名</th>
+                    <th align="center">顧客電話</th>
+                    <th align="center">顧客電子郵件</th>
+                </tr>
+                {{#each showAllCustomer}} {{> adminLoginHomePage_viewCustomers}} {{/each}}
+            </table>
+        </div>
+        <div id="descRegion_manageInv" style="display: none">
+            <table id="manageInv_table" width="60%" border="1">
+                <tr>
+                    <th align="center">原料編號</th>
+                    <th align="center">原料名稱</th>
+                    <th align="center">原料庫存</th>
+                    <th align="center">原料單位</th>
+                    <th align="center">操作</th>
+                </tr>
+                {{#each showAllInv}} {{> adminLoginHomePage_manageInv}} {{/each}}
+            </table>
+            <button id="invAddNewIngredient" class="listbut">新增原料項目</button>
+        </div>
+        <div id="descRegion_buyInv" style="display: none;">
+            <table id="buyInv_table" width="100%" border="1">
+                <tr>
+                    <th align="center">訂單編號</th>
+                    <th align="center">原料名稱</th>
+                    <th align="center">數量</th>
+                    <th align="center">下單時間</th>
+                    <th align="center">訂單完成時間</th>
+                    <th align="center">操作</th>
+                    
+                </tr>
+                {{#each showAllInvOrders}} {{> adminLoginHomePage_buyInv}} {{/each}}
+            </table>
+        </div>
+        <div id="descRegion_financeFlow" style="display: none;">
+            <table id="financeFlow" width="60%" border="1">
+                <tr>
+                    <th align="center">編號</th>
+                    <th align="center">項目</th>
+                    <th align="center">收入/支出</th>
+                    <th align="center">金額</th>
+                </tr>
+                {{#each financeFlow}} {{> adminLoginHomePage_financeFlow}} {{/each}}
+            </table>
+        </div>
+    </div>
+</template>

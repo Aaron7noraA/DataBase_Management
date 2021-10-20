@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homepage</title>
+	<meta charset="utf-8"></meta>
+</head>
+<body class="kk" >
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px
+		}
+		.right_page{
+			float: right;
+			height: 220px;
+			width: 700px;
+			background-color: rgba(255,180,255,0.5);
+			text-align: center;
+			font-size: 100px;
+			padding-top: 320px;
+			font-family:monospace;
+		}
+		.small_icon {
+			width: 100%;
+			height: 20%;
+			position: absolute;
+			bottom: 10%;
+			background-position: 100% 100%;
+
+			background-size: cover;
+		}
+		.icon{
+			float: left;
+			width: 15%;
+			height: 20%;
+			background-color: yellow;
+		}
+		.slider_container {
+			z-index: -1;
+			width: 45%;
+			height: 57%;
+			position: absolute;
+			background-position: 100% 100%;
+			background-size: cover;
+			float: left;	
+
+		}
+
+		.slider_container div {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    opacity: 0;
+		    filter: alpha(opacity=0);
+		}
+
+		.slider_container div {
+		    -webkit-animation: round 25s linear infinite;
+		            animation: round 25s linear infinite;
+		}
+		.slider_container span {    
+		    font-family:Microsoft JhengHei;
+			color: #000;
+		    background: rgba(255,180,255,0.2);
+		    position: absolute;
+		    margin: 0px;
+		    padding: 0px;
+		    left: 0%;
+		    bottom: 0px;
+		    width: 45%;
+		    height: 500px;
+		    font-size: 30px;
+		    text-align: center;
+		    line-height: 900px;
+		    -webkit-transform:scaleY(0);
+		        -ms-transform:scaleY(0);
+		            transform:scaleY(0);
+		    -webkit-transition: all 0.5s ease-in-out;
+		            transition: all 0.5s ease-in-out;
+
+		}
+
+		.slider_container:hover span {
+		    font-family:Microsoft JhengHei;
+			width: 45%;
+		    background: rgba(255,180,255,0.2);
+		    -webkit-transform:scaleY(1);
+		        -ms-transform:scaleY(1);
+		            transform:scaleY(1);
+		}
+		.slider_container:hover div {
+		    -webkit-animation-play-state: paused;
+		            animation-play-state: paused;
+		}
+
+		@-webkit-keyframes round {
+		    4% {
+		        opacity: 1;
+		        filter: alpha(opacity=100);
+		        /* 0 - 1秒 淡入*/
+		    }
+		    20% {
+		        opacity: 1;
+		        filter: alpha(opacity=100);
+		        /* 1- 5秒靜止*/
+		    }
+		    24% {
+		        opacity: 0;
+		        filter: alpha(opacity=0);
+		        /* 5-6秒淡出*/
+		    }
+		}
+		@keyframes round {
+		    4% {
+		        opacity: 1;
+		        filter: alpha(opacity=100);
+		        /* 0 - 1秒 淡入*/
+		    }
+		    20% {
+		        opacity: 1;
+		        filter: alpha(opacity=100);
+		        /* 1- 5秒靜止*/
+		    }
+		    24% {
+		        opacity: 0;
+		        filter: alpha(opacity=0);
+		        /* 5-6秒淡出*/
+		    }
+		}
+
+		.slider_container div:nth-child(5) {
+		    -webkit-animation-delay: 0s;
+		            animation-delay: 0s;
+		}
+
+		.slider_container div:nth-child(4) {
+		    -webkit-animation-delay: 5s;
+		            animation-delay: 5s;
+		}
+
+		.slider_container div:nth-child(3) {
+		    -webkit-animation-delay: 10s;
+		            animation-delay: 10s;
+		}
+
+		.slider_container div:nth-child(2) {
+		    -webkit-animation-delay: 15s;
+		            animation-delay: 15s;
+		}
+
+		.slider_container div:nth-child(1) {
+		    -webkit-animation-delay: 20s;
+		            animation-delay: 20s;
+		}
+
+		.a{
+		list-style-type:none;
+		
+		padding:0px;
+		overflow:hidden;
+		background-color:#FF6100;
+		vertical-align: top;
+		}
+		.bot_info{
+		background-color:#FF6100;
+		color: white;
+		position: absolute;
+		top: 550px;
+		padding: 40px;
+		height: 10%;
+		width: 100%;
+		
+		}
+		.bottomm{
+		background-color:black;
+		color: white;
+		position: absolute;
+		top: 680px;
+		padding: 20px;
+		height: 10px;
+		width: 100%;
+		text-align: center;
+		}
+
+		.b{
+			float:left;	
+		}
+
+		.c{ 
+		display:block;
+		color:white;
+		text-align:center;
+		padding:20px;
+		text-decoration:none;
+		margin: 0px;
+		}
+		.p{ 
+		font-size: 12;
+		color:white;
+		}
+
+		li a:hover{
+		background:rgb(255,230,0);
+		padding:30px;
+		}
+	</style>
+	<div>
+		<ul class="a">
+		<li class="b"><a href="http://localhost/Homepage.html" class="c">Home</a></li>
+		<li class="b"><a href="https://news.google.com/topstories?hl=zh-TW&tab=rn&gl=TW&ceid=TW:zh-Hant" class="c">News</a></li>
+		<li class="b"><a href="http://localhost/about.html" class="c">About</a></li>
+		<li style="float:right;"><a href="http://localhost:4000/adminLogin" class="c">Admin Login</a></li>
+		<li style="float:right;"><a href="http://localhost:4000/" class="c">Client Login</a></li>
+		<li style="float:right;"><a href="http://localhost:4000/register" class="c">Register</a></li>
+		</ul>
+<div class="bot_info">
+		<pre><span style="font-family: Comic Sans MS, Microsoft JhengHei;"><table width="650">
+		    <tr>
+			  <td>         </td>
+			  <td><a href="https://www.tasty.com.tw/index.html" target="_blank" class="p">西堤牛排</a></td>
+			  <td><a href="https://www.wangsteak.com.tw/" target="_blank" class="p">王品牛排</a></td>
+			  <td><a href="https://www.tokiya.com.tw/" target="_blank" class="p">陶板屋和風創作料理</a></td>
+			  <td><a href="https://www.yakiyan.com/" target="_blank" class="p">原燒 YAKIYAN</a></td>
+			</tr></table>                想給我們意見、想與我們合作，歡迎聯絡我們!         服務專線: 0800-080-128
+		門市地址: 新竹市大學路1001號                               營業時間: 11:30~14:30 (最後點餐時間14:00)17:30~22:00(最後點餐時間21:00)</span>
+		</pre>
+</div>
+<div class="bottomm">
+Copyright © The Roft. All Rights Reserved.
+</div>
+		<div class="right_page" >The Roft</div>
+		<div class="slider_container">
+			<div>
+				<img style="height: 500px;" src="11.jpg" alt="pure css3 slider" />
+				<span>最暢銷「珍珠奶茶」</span>
+			</div>
+			<div>
+				<img  style="height: 500px;" src="15.jpg" alt="pure css3 slider" />
+				<span>異國奢華「鴨胸佐紅酒醬」</span>
+			</div>
+			<div>
+				<img style="height: 500px;" src="10.jpg" alt="pure css3 slider" />
+				<span>巧克力布朗尼佐香草冰淇淋</span>
+			</div>
+			<div>
+				<img style="height: 500px;" src="12.jpg" alt="pure css3 slider" />
+				<span>匈牙利牛肉湯</span>
+			</div>
+			<div>
+				<img style="height: 500px;" src="15.jpg" alt="pure css3 slider" />
+				<span>異國奢華「鴨胸佐紅酒醬」</span>
+			</div>
+
+		</div>
+		
+	</div>
+	<!--
+/*
+<div class="small_icon">
+	<div class="icon">
+		<img src="inter.png">
+	</div >
+	<div class="icon">
+		<img src="test2.png">
+	</div >
+
+</div>
+*/-->
+
+	
+
+</body>
+</html>

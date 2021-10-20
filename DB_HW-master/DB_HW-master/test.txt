@@ -1,0 +1,323 @@
+
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- 資料庫： `test`
+--
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `adminusers`
+--
+
+CREATE TABLE `adminusers` (
+  `index` int(11) NOT NULL,
+  `admin` text NOT NULL,
+  `passwd` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- 傾印資料表的資料 `adminusers`
+--
+
+INSERT INTO `adminusers` (`index`, `admin`, `passwd`) VALUES
+(1, 'kumiko', '1234');
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `financeflow`
+--
+
+CREATE TABLE `financeflow` (
+  `financeID` int(11) NOT NULL,
+  `financeTitle` text NOT NULL,
+  `financeInOut` text NOT NULL,
+  `financeAmount` int(11) NOT NULL,
+  `financeDateTime` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- 傾印資料表的資料 `financeflow`
+--
+
+INSERT INTO `financeflow` (`financeID`, `financeTitle`, `financeInOut`, `financeAmount`, `financeDateTime`) VALUES
+(1, '客戶付款', '收入', 1150, '0000-00-00'),
+(2, '原料支出', '支出', 8000, '0000-00-00'),
+(3, '客戶付款', '收入', 660, '2020-06-15'),
+(4, '客戶付款', '收入', 40, '2020-06-15'),
+(5, '客戶付款', '收入', 280, '2020-06-15');
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `inventory`
+--
+
+CREATE TABLE `inventory` (
+  `ingredientID` int(11) NOT NULL,
+  `ingredientName` text NOT NULL,
+  `ingredientAmount` int(11) NOT NULL,
+  `ingredientUnit` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- 傾印資料表的資料 `inventory`
+--
+
+INSERT INTO `inventory` (`ingredientID`, `ingredientName`, `ingredientAmount`, `ingredientUnit`) VALUES
+(1, '麵粉', 158, '包'),
+(2, '高麗菜', 50, '顆'),
+(3, '培根', 40, '包');
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `invorder`
+--
+
+CREATE TABLE `invorder` (
+  `invOrderIndex` int(11) NOT NULL,
+  `invOrderID` int(11) NOT NULL,
+  `invOrderName` text NOT NULL,
+  `invOrderAmount` int(11) NOT NULL,
+  `invOrderUnit` text NOT NULL,
+  `invOrderIsDone` tinyint(1) NOT NULL DEFAULT 0,
+  `invOrderIssuedAt` text NOT NULL,
+  `invOrderFinishedAt` text DEFAULT NULL,
+  `invOrderCost` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- 傾印資料表的資料 `invorder`
+--
+
+INSERT INTO `invorder` (`invOrderIndex`, `invOrderID`, `invOrderName`, `invOrderAmount`, `invOrderUnit`, `invOrderIsDone`, `invOrderIssuedAt`, `invOrderFinishedAt`, `invOrderCost`) VALUES
+(1, 1, '麵粉', 20, '包', 0, '06/09 05:39:07', '06/13 10:31:28', 0),
+(2, 2, '高麗菜', 10, '顆', 0, '06/09 05:42:12', '06/09 05:55:47', 0),
+(3, 1, '麵粉', 20, '包', 0, '06/13 10:32:46', '06/13 10:32:53', 0),
+(4, 2, '高麗菜', 87, '顆', 0, '06/13 10:41:38', '06/13 10:58:39', 0),
+(5, 1, '麵粉', 56, '包', 0, '06/13 10:59:40', '06/13 10:59:44', 0),
+(6, 1, '麵粉', 32, '包', 0, '06/13 11:02:59', '06/13 11:03:05', 0),
+(7, 1, '麵粉', 22, '包', 0, '06/14 11:00:28', NULL, 0),
+(8, 1, '麵粉', 56, '包', 0, '06/14 11:21:20', '06/14 11:21:25', 0),
+(9, 3, '培根', 40, '包', 0, '06/15 12:02:19', '06/15 12:02:23', 8000);
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `meals`
+--
+
+CREATE TABLE `meals` (
+  `mealID` int(11) NOT NULL,
+  `mealName` text NOT NULL,
+  `mealDesc` text NOT NULL,
+  `mealPrice` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- 傾印資料表的資料 `meals`
+--
+
+INSERT INTO `meals` (`mealID`, `mealName`, `mealDesc`, `mealPrice`) VALUES
+(1, '水餃(10顆)', '好ㄘ的水餃', 40),
+(2, '陽春麵', '我家巷口的陽春麵', 40),
+(3, '餛飩麵', '6顆餛飩', 50),
+(4, '培根炒飯', '很健康的醃製培根。', 70),
+(5, '蝦仁炒飯', '超大ㄉ蝦仁', 65),
+(6, '香腸炒飯', '很大的香腸', 70),
+(7, '豪大雞排', '很大的雞排', 87);
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `orders`
+--
+
+CREATE TABLE `orders` (
+  `orderID` int(11) NOT NULL,
+  `orderBy` int(11) NOT NULL,
+  `orderByName` text NOT NULL,
+  `orderArray` text NOT NULL,
+  `orderDetail` text NOT NULL,
+  `orderAt` text NOT NULL,
+  `orderPrice` int(11) NOT NULL,
+  `orderIsBilled` tinyint(1) NOT NULL,
+  `orderIsProcessed` tinyint(1) NOT NULL DEFAULT 0,
+  `orderProcessedBy` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- 傾印資料表的資料 `orders`
+--
+
+INSERT INTO `orders` (`orderID`, `orderBy`, `orderByName`, `orderArray`, `orderDetail`, `orderAt`, `orderPrice`, `orderIsBilled`, `orderIsProcessed`, `orderProcessedBy`) VALUES
+(8, 2, 'kumiko', '2,3,3,1', '陽春麵 3份\n餛飩麵 1份\n', '06-06 07:56:38', 170, 0, 1, NULL),
+(12, 2, 'kumiko', '2,1', '陽春麵 1份\n', '06-07 01:50:03', 40, 1, 1, NULL),
+(13, 2, 'kumiko', '1,9,3,6', '水餃(10顆) 9份\n餛飩麵 6份\n', '06-07 01:52:24', 660, 1, 0, NULL),
+(14, 5, '0613319', '1,5,2,6,3,6,4,7', '水餃(10顆) 5份\n陽春麵 6份\n餛飩麵 6份\n培根炒飯 7份\n', '06-07 01:53:10', 1125, 0, 0, NULL),
+(16, 5, '', '1,2,2,3,3,3,4,2,5,3,6,2', '水餃(10顆) 2份\n陽春麵 3份\n餛飩麵 3份\n培根炒飯 2份\n蝦仁炒飯 3份\n香腸炒飯 2份\n', '06-13 05:19:30', 825, 0, 1, NULL),
+(17, 5, '', '', '', '06-13 05:19:49', 0, 0, 0, NULL),
+(19, 2, '', '', '', '06-14 10:54:21', 0, 0, 0, NULL),
+(20, 2, '', '4,4', '培根炒飯 4份\n', '06-15 12:20:48', 280, 1, 1, NULL),
+(21, 2, 'OumaeKumiko', '3,6', '餛飩麵 6份\n', '06-15 12:25:03', 300, 0, 0, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `processor`
+--
+
+CREATE TABLE `processor` (
+  `processorID` int(11) NOT NULL,
+  `processorName` text NOT NULL,
+  `processorPhone` text NOT NULL,
+  `processorQueue` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `susers`
+--
+
+CREATE TABLE `susers` (
+  `userid` int(10) UNSIGNED NOT NULL,
+  `username` varchar(32) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `name` text NOT NULL,
+  `phone` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- 傾印資料表的資料 `susers`
+--
+
+INSERT INTO `susers` (`userid`, `username`, `email`, `password`, `name`, `phone`) VALUES
+(1, 'user', 'test@user.com', 'pass', 'user', '123456789'),
+(2, 'kumiko', 'hkh94539@gmail.com', '1234', 'OumaeKumiko', '000'),
+(3, 'reina', 'euphokumiko.iem06@nctu.edu.tw', '1234', 'KousakaReina', '123456789'),
+(4, 'kanade', 'euphokumiko.iem06@nctu.edu.tw', '1234', 'HisaishiKanade', '0968081759'),
+(5, '0613319', '1', '0613319', 'jimwu', '1');
+
+--
+-- 已傾印資料表的索引
+--
+
+--
+-- 資料表索引 `adminusers`
+--
+ALTER TABLE `adminusers`
+  ADD PRIMARY KEY (`index`);
+
+--
+-- 資料表索引 `financeflow`
+--
+ALTER TABLE `financeflow`
+  ADD PRIMARY KEY (`financeID`);
+
+--
+-- 資料表索引 `inventory`
+--
+ALTER TABLE `inventory`
+  ADD PRIMARY KEY (`ingredientID`);
+
+--
+-- 資料表索引 `invorder`
+--
+ALTER TABLE `invorder`
+  ADD PRIMARY KEY (`invOrderIndex`);
+
+--
+-- 資料表索引 `meals`
+--
+ALTER TABLE `meals`
+  ADD PRIMARY KEY (`mealID`);
+
+--
+-- 資料表索引 `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`orderID`);
+
+--
+-- 資料表索引 `processor`
+--
+ALTER TABLE `processor`
+  ADD PRIMARY KEY (`processorID`);
+
+--
+-- 資料表索引 `susers`
+--
+ALTER TABLE `susers`
+  ADD PRIMARY KEY (`userid`);
+
+--
+-- 在傾印的資料表使用自動遞增(AUTO_INCREMENT)
+--
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `adminusers`
+--
+ALTER TABLE `adminusers`
+  MODIFY `index` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `financeflow`
+--
+ALTER TABLE `financeflow`
+  MODIFY `financeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `inventory`
+--
+ALTER TABLE `inventory`
+  MODIFY `ingredientID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `invorder`
+--
+ALTER TABLE `invorder`
+  MODIFY `invOrderIndex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `meals`
+--
+ALTER TABLE `meals`
+  MODIFY `mealID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `orderID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `processor`
+--
+ALTER TABLE `processor`
+  MODIFY `processorID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `susers`
+--
+ALTER TABLE `susers`
+  MODIFY `userid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

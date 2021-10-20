@@ -1,0 +1,80 @@
+#__blaze-root {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+  font-family: Microsoft JhengHei;
+}
+
+
+#loginHomePage_descRegion, #adminLoginHomePage_descRegion{
+  font-size: 18px;
+  padding: 30px;
+}
+
+.title-inline{
+  display: inline-block;
+}
+
+.funcbut {
+  background-color: rgb(227, 209, 248);
+  border: 1px solid rgb(227, 209, 248);
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.funcbut:hover{
+  background-color: rgb(179, 159, 202);
+  font-style: bold;
+}
+
+.descbut {
+  background-color: rgb(47, 175, 111);
+  border: rgb(26, 133, 79) solid 1px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.listbut {
+  background-color: honeydew;
+  border: rgb(26, 133, 79) solid 1px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.mealamount {
+  font-size: 20px;
+  background-color: khaki;
+  border: solid 1px;
+}
+
+#adminLoginHomePage_topRegion, #loginHomePage_topRegion{
+  background-color: bisque;
+  padding: 20px;
+  height: 15%;
+}
+
+#loginHomePage_descRegion, #adminLoginHomePage_descRegion {
+  
+  background-color: rgb(111, 177, 252);
+}
+
+#descRegion_viewMeal, #descRegion_adminViewMeal {
+  display: block;
+}
+
+#descRegion_myOrders, #descRegion_myData, #descRegion_adminAddMeal, #descRegion_adminViewOrders, #descRegion_manageInv {
+  display: none;
+}
+
+#viewMeal_table, #descRegion_myOrders, #buyInv_table, #manageInv_table, #viewCustomers{
+  text-align: left;
+}

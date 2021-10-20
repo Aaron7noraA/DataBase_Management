@@ -1,0 +1,24 @@
+<template name="adminLoginHomePage_buyInv">
+    <tr>
+        <td>{{invOrderIndex}}</td>
+        <td>{{invOrderName}}</td>
+        <td>{{invOrderAmount}}</td>
+        <td>{{invOrderIssuedAt}}</td>
+        <td>
+            {{#if invOrderFinishedAt}}
+                {{invOrderFinishedAt}}
+            {{else}}
+                訂單未完成
+            {{/if}}
+        </td>
+        <td>
+            {{#if invOrderFinishedAt}}
+                
+            {{else}}
+                <button class="buyInv_confirmBuy listbut">確認進貨</button>
+            {{/if}}
+            
+        </td>
+
+    </tr>
+</template>

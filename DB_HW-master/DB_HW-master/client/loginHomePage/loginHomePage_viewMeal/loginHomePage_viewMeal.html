@@ -1,0 +1,26 @@
+<template name="loginHomePage_viewMeal">
+    <tr>
+        <td id="viewMeal_table_ID">{{mealID}}</td>
+        <td>{{mealName}}</td>
+        <td>{{mealDesc}}</td>
+        <td>{{mealPrice}}</td>
+        <td>
+            <select name="number" id="viewMeal_mealAmount_{{mealID}}" class="mealamount">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </td>
+        <td>
+            <a href="{{mealPic}}" target="_blank">圖片連結</a>
+        </td>
+    </tr>
+</template>

@@ -1,0 +1,37 @@
+<template name="adminLoginHomePage_viewOrders">
+    <tr>
+        <td>{{orderID}}</td>
+        <td>{{orderByName}}</td>
+        <td>{{orderDetail}}</td>
+        <td>{{orderAt}}</td>
+        <td>{{orderPrice}}</td>
+        <td>
+            {{#if orderIsBilled}}
+                已付款
+            {{else}}
+                未付款
+            {{/if}}
+        </td>
+        <td>
+            {{#if orderIsProcessed}}
+                已出餐
+            {{else}}
+                準備中
+            {{/if}}
+        </td>
+        <td>
+            {{#if orderProcessedBy}}
+                {{orderProcessedBy}}
+            {{else}}
+                無
+            {{/if}}
+        </td>
+        <td>
+            {{#if orderIsProcessed}}
+                
+            {{else}}
+                <button class="confirmSendMeal listbut" >確認出餐</button>
+            {{/if}}
+        </td>
+    </tr>
+</template>

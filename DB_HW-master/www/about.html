@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>about</title>
+	<meta charset="utf-8"></meta>
+</head>
+<body>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px
+		}
+		.a{
+		list-style-type:none;
+		
+		padding:0px;
+		overflow:hidden;
+		background-color:#FF6100;
+		vertical-align: top;
+		}
+		.bot_info{
+		background-color:black;
+		color: white;
+		position: absolute;
+		bottom: 0;
+		padding: 10px;
+		width: 100%;
+
+		}
+
+		.b{
+			float:left;	
+		}
+
+		.c{ 
+		display:block;
+		color:white;
+		text-align:center;
+		padding:20px;
+		text-decoration:none;
+		margin: 0px;
+		}
+
+		li a:hover{
+		background:rgb(255,230,0);
+		padding:20px;
+		}
+
+		.up_title{
+
+			height: 200px;
+			background-color: rgba(148,0,211,0.2);
+			padding: 50px;
+			text-align: center;
+			font-size: 30px;
+		}
+		.up_title_box1{
+			position: absolute;
+			margin-left: 0%;
+			width: 300px;
+			height: 200px;
+			background-color: grey;
+			line-height: 200px;
+			font-family: fantasy;
+			border-radius: 10%;
+		}
+
+		.up_title_box1 a{
+			color: black;
+			text-decoration: none;
+		}
+
+		.up_title_box1:hover div {
+		    width: 50%;
+		    border-radius: 10%;
+		    background-color: rgba(255,255,255,0.6);
+		    -webkit-transform:scaleY(1);
+		        -ms-transform:scaleY(1);
+		            transform:scaleY(1);
+		}
+
+		.up_title_box1:hover div{
+			position: absolute;
+			margin-left: 0%;
+			width: 330px;
+			height: 220px;
+			background-color:rgba(255,255,255,0.5);
+
+		    -webkit-transition: all 0.3s ease-in-out;
+		            transition: all 0.3s ease-in-out;
+		}
+
+		.up_title_box1:hover{
+			position: absolute;
+			margin-left: 0%;
+			width: 330px;
+			height: 220px;
+
+		    -webkit-transition: all 0.1s ease-in-out;
+		            transition: all 0.1s ease-in-out;
+		}
+		.up_title_box2{
+			position: absolute;
+			margin-left: 20%;
+			width: 300px;
+			height: 200px;
+			background-color: grey;
+			line-height: 200px;
+			font-family: fantasy;
+			border-radius: 10%;
+		}
+		.up_title_box2 a{
+			color: black;
+			text-decoration: none;
+		}
+
+		.up_title_box2:hover div {
+		    width: 50%;
+		    border-radius: 10%;
+		    background-color: rgba(255,255,255,0.6);
+		    -webkit-transform:scaleY(1);
+		        -ms-transform:scaleY(1);
+		            transform:scaleY(1);
+		}
+
+		.up_title_box2:hover div{
+			position: absolute;
+			margin-left: 0%;
+			width: 330px;
+			height: 220px;
+			background-color:rgba(255,255,255,0.5);
+
+		    -webkit-transition: all 0.3s ease-in-out;
+		            transition: all 0.3s ease-in-out;
+		}
+
+		.up_title_box2:hover{
+			position: absolute;
+			margin-left: 20%;
+			width: 330px;
+			height: 220px;
+
+		    -webkit-transition: all 0.1s ease-in-out;
+		            transition: all 0.1s ease-in-out;
+		}
+		.up_title_box3{
+			position: absolute;
+			margin-left: 40%;
+			width: 300px;
+			height: 200px;
+			background-color: grey;
+			line-height: 200px;
+			font-family: fantasy;
+			border-radius: 10%;
+		}
+		.up_title_box3 a{
+			color: black;
+			text-decoration: none;
+		}
+		.up_title_box3:hover div {
+		    width: 50%;
+		    border-radius: 10%;
+		    background-color: rgba(255,255,255,0.6);
+		    -webkit-transform:scaleY(1);
+		        -ms-transform:scaleY(1);
+		            transform:scaleY(1);
+		}
+
+		.up_title_box3:hover div{
+			position: absolute;
+			margin-left: 0%;
+			width: 330px;
+			height: 220px;
+			background-color:rgba(255,255,255,0.5);
+
+		    -webkit-transition: all 0.3s ease-in-out;
+		            transition: all 0.3s ease-in-out;
+		}
+
+		.up_title_box3:hover{
+			position: absolute;
+			margin-left: 40%;
+			width: 330px;
+			height: 220px;
+
+		    -webkit-transition: all 0.1s ease-in-out;
+		            transition: all 0.1s ease-in-out;
+		}
+		.up_title_box4{
+			position: absolute;
+			margin-left: 60%;
+			width: 300px;
+			height: 200px;
+			background-color: grey;
+			line-height: 200px;
+			font-family: fantasy;
+			border-radius: 10%;
+		}
+		.up_title_box4 a{
+			color: black;
+			text-decoration: none;
+		}
+
+		.up_title_box4:hover div {
+		    width: 50%;
+		    border-radius: 10%;
+		    background-color: rgba(255,255,255,0.6);
+		    -webkit-transform:scaleY(1);
+		        -ms-transform:scaleY(1);
+		            transform:scaleY(1);
+		}
+
+		.up_title_box4:hover div{
+			position: absolute;
+			margin-left: 0%;
+			width: 330px;
+			height: 220px;
+			background-color:rgba(255,255,255,0.5);
+
+		    -webkit-transition: all 0.3s ease-in-out;
+		            transition: all 0.3s ease-in-out;
+		}
+
+		.up_title_box4:hover{
+			position: absolute;
+			margin-left: 60%;
+			width: 330px;
+			height: 220px;
+
+		    -webkit-transition: all 0.1s ease-in-out;
+		            transition: all 0.1s ease-in-out;
+		}
+		.up_title_box5{
+			position: absolute;
+			margin-left: 80%;
+			width: 300px;
+			height: 200px;
+			background-color: grey;
+			line-height: 200px;
+			font-family: fantasy;
+			border-radius: 10%;
+		}
+		.up_title_box5 a{
+			color: black;
+			text-decoration: none;
+		}
+
+		.up_title_box5:hover div {
+		    width: 50%;
+		    border-radius: 10%;
+		    background-color: rgba(255,255,255,0.6);
+		    -webkit-transform:scaleY(1);
+		        -ms-transform:scaleY(1);
+		            transform:scaleY(1);
+		}
+
+		.up_title_box5:hover div{
+			position: absolute;
+			margin-left: 0%;
+			width: 330px;
+			height: 220px;
+			background-color:rgba(255,255,255,0.5);
+
+		    -webkit-transition: all 0.3s ease-in-out;
+		            transition: all 0.3s ease-in-out;
+		}
+
+		.up_title_box5:hover{
+			position: absolute;
+			margin-left: 80%;
+			width: 330px;
+			height: 220px;
+
+		    -webkit-transition: all 0.1s ease-in-out;
+		            transition: all 0.1s ease-in-out;
+		}
+		.story{
+			position: absolute;
+			float: top;
+			width: 100%;
+			height: 2400px;
+			background-color: white;
+			background-color: 	#FFE4C4;
+		}
+		.mid_area{
+			float: top;
+			height: 200px;
+			width: 100%;
+			background-color: 	#FFE4C4;
+			margin-left: 30px;
+			margin-top: 30px;
+		}
+		.mid_area_end{
+			float: top;
+			height: 350px;
+			width: 100%;
+			background-color: 	#FFE4C4;
+			margin-left: 30px;
+		}
+		.right_space_p{
+			float:right;
+			margin-right: 45%;
+		}
+		.right_space_h{
+			float:right;
+			margin-right: 3%;
+		}
+		.left_space_h{
+			float: left;
+			margin-left: 2%;
+		}
+		.p{ 
+			font-size: 12;
+			color:white;
+		}
+    
+		.bot_info{
+			background-color:#FF6100;
+			color: white;  
+			position: absolute;
+			top: 580px;
+			padding: 40px;
+			height: 15%;
+			width: 100%;
+		}
+
+		.bottomm{
+			background-color:black;
+			color: white;
+			position: absolute;
+			top: 680px;
+			padding: 20px;
+			height: 10px;
+			width: 100%;
+			text-align: center;
+		}
+	</style>
+
+	<div>
+		<ul class="a">
+		<li class="b"><a href="http://localhost/Homepage.html" class="c">Home</a></li>
+		<li class="b"><a href="https://news.google.com/topstories?hl=zh-TW&tab=rn&gl=TW&ceid=TW:zh-Hant" class="c">News</a></li>
+		<li class="b"><a href="http://localhost/about.html" class="c">About</a></li>
+		<li style="float:right;"><a href="http://localhost:4000/adminLogin" class="c">Admin Login</a></li>
+		<li style="float:right;"><a href="http://localhost:4000/" class="c">Client Login</a></li>
+		<li style="float:right;"><a href="http://localhost:4000/register" class="c">Register</a></li>
+		</ul>
+	</div>
+	<div class="up_title">
+		<div class="up_title_box1" style="background-image:url('tt1.jpg');font-family:DFKai-sb;font-size:42px;"><a href="#c1"><div><b>目前概況</b></div></a></div>
+		<div class="up_title_box2" style="background-image:url('tt2.jpg');font-family:DFKai-sb;font-size:42px;"><a href="#c2"><div><b>品牌理念</b></div></a></div>
+		<div class="up_title_box3" style="background-image:url('tt3.jpg');font-family:DFKai-sb;font-size:42px;"><a href="#c3"><div><b>獲得獎項</b></div></a></div>
+		<div class="up_title_box4" style="background-image:url('tt4.jpg');font-family:DFKai-sb;font-size:42px;"><a href="#c4"><div><b>核心價值</b></div></a></div>
+		<div class="up_title_box5" style="background-image:url('tt5.jpg');font-family:DFKai-sb;font-size:42px;"><a href="#c5"><div><b>企業願景</b></div></a></div>
+	</div>
+	<div class="story">
+		<div class="mid_area">
+			<p style="font-family: fantasy,DFKai-sb; font-size: 60px;" id="c1">§<b>目前概況</b>:</p><br>
+			
+			<h1 style="font-family: Georgia, 'Times New Roman', Times, serif,DFKai-sb; font-size: 24px;" class="left_space_h">TheRoft 成立於2018年，以累積近2年的餐飲服務產業為根基，聚焦餐飲業經營，<br>透過多品牌的經營策略布局，於已成功獲得多間餐飲業贊助。躍居台灣第一大餐飲，每天來客量超1萬人。
+			</h1>		
+		</div>
+
+		<div style="float: top;height: 200px;width: 912px;margin-left: 30px;background-image:url('tt1.jpg')"></div>
+
+		<div class="mid_area">
+			<p style="font-family: fantasy,DFKai-sb; font-size: 60px;"  id="c2">§<b>品牌理念</b>:</p><br><br>
+
+			<h1 style="font-family: Georgia, 'Times New Roman', Times, serif,DFKai-sb; font-size: 24px;" class="left_space_h">餐飲是文化的投射，The Roft持續開創新品牌，致力於多品牌經營與創新，在口味上滿足台灣消費市場多元需求，<br>並讓消費者從年輕到老年都可以與集團聯結，轉換不同的餐飲需求與顧客體驗。
+			</h1>
+		</div>
+		
+		<div class="mid_area">
+			<div style="float: top;height: 200px;width: 912px;margin-left: 30px;background-image:url('tt2.jpg')"></div>
+
+		</div>
+
+		<div class="mid_area">
+			<p style="font-family: fantasy,DFKai-sb; font-size: 60px;" id="c3">§<b>獲得獎項</b>:</p><br>
+
+			<h1 style="font-family: Georgia, 'Times New Roman', Times, serif,DFKai-sb; font-size: 24px;" class="left_space_h">The Roft不斷精進與突破，開發需多創意料理。於開業首年即獲得米乞靈三星肯定。<br>希望未來能得到米乞靈一星。於2019參加FIA食創獎，由13位跨食品研發、企業社會責任、餐飲管理、行銷廣告、<br>
+				與設計美學等行業專家組成的專業評審團審慎評估後，The Roft 得到第一名的殊榮。
+			</h1>
+		</div>
+
+		<div style="float: top;height: 200px;width: 912px;margin-left: 30px;background-image:url('tt3.jpg')"></div>
+
+		<div class="mid_area">
+			<p style="font-family: fantasy,DFKai-sb; font-size: 60px;" id="c4">§<b>核心價值</b>:</p><br><br>
+			<h1 style="font-family: Georgia, 'Times New Roman', Times, serif,DFKai-sb; font-size: 24px;" class="left_space_h">誠實是The Roft核心價值觀的第一要素；誠懇待人，取信於人，對自己所做的每一項工作，為顧客送上的每一道菜，<br>向社會大眾做的每一項承諾。並且，學習誠實面對自己，培養自我反省能力。
+			</h1>
+		</div>
+
+		<div class="mid_area"><div style="float: top;height: 200px;width: 912px;margin-left: 30px;background-image:url('tt4.jpg')"></div></div>
+
+		<div class="mid_area_end">
+			<br><p style="font-family: fantasy,DFKai-sb; font-size: 60px;" id="c5">§<b>企業願景</b>:</p><br>
+	
+			<h1 style="font-family: fantasy,DFKai-sb; font-size: 30px;float: left;margin-left: 2%;" >﹡我們的使命  –</h1><br><br><br>
+			<h2 style="font-family: fantasy,DFKai-sb; font-size: 24px;float: left;margin-left: 6%;">☆「以超群的經營團隊，提供顧客優質的餐飲體驗， 善盡企業公民責任。」☆</h2><br><br><br>
+			<h1 style="font-family: fantasy,DFKai-sb; font-size: 30px;float: left;margin-left: 2%;">﹡我們的願景  –</h1><br><br><br>
+			<h2 style="font-family: fantasy,DFKai-sb; font-size: 24px;float: left;margin-left: 6%;">★『成為全台灣最優質的連鎖餐飲集團！』★</h2>
+		</div>
+		<div style="float: top;height: 200px;width: 912px;margin-left: 30px;background-image:url('tt5.jpg')"></div>
+	</div>
+	<div style="position: fixed; right: 15px; bottom:15px;"><a href="#top" style="text-decoration: none; color: black; font-family: fantasy;"><img src="up.png" height="70" width="60"><b>回到最上層</b></a></div>
+	<div class="bot_info" style="background-color:#FF6100;top: 2750px;">
+		<pre><span style="font-family: Comic Sans MS, Microsoft JhengHei;"><table width="650">
+		    <tr>
+			  <td>         </td>
+			  <td><a href="https://www.tasty.com.tw/index.html" target="_blank" class="p">西堤牛排</a></td>
+			  <td><a href="https://www.wangsteak.com.tw/" target="_blank" class="p">王品牛排</a></td>
+			  <td><a href="https://www.tokiya.com.tw/" target="_blank" class="p">陶板屋和風創作料理</a></td>
+			  <td><a href="https://www.yakiyan.com/" target="_blank" class="p">原燒 YAKIYAN</a></td>
+			</tr></table>                想給我們意見、想與我們合作，歡迎聯絡我們!         服務專線: 0800-080-128
+		門市地址: 新竹市大學路1001號                               營業時間: 11:30~14:30 (最後點餐時間14:00)17:30~22:00(最後點餐時間21:00)</span>
+		</pre>
+	</div>
+  
+	<div class="bottomm" style="top:2900px;">
+		Copyright © The Roft. All Rights Reserved.
+	</div>
+
+</body>
+</html>

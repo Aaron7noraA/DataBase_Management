@@ -1,0 +1,35 @@
+<template name="loginHomePage_myOrders">
+    <tr>
+        <td>{{orderAt}}</td>
+        <td>{{orderDetail}}</td>
+        <td>{{orderPrice}}</td>
+        <td>
+            {{#if orderIsProcessed}}
+            已出餐
+            {{else}}
+            準備中
+            {{/if}}
+        </td>
+        <td>
+            {{#if orderIsBilled}} 
+            已付款 
+            {{else}}
+            未付款
+            {{/if}}
+        </td>
+        <td>
+            
+            {{#if orderIsBilled}}
+                
+            {{else}}
+                <button class="myOrders_pay listbut">付款</button>
+            {{/if}}
+            {{#if orderIsProcessed}}
+
+            {{else}}
+                <button class="myOrders_cancel listbut">取消訂單</button>
+            {{/if}}
+
+        </td>
+    </tr>
+</template>

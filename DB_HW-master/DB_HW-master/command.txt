@@ -1,0 +1,3 @@
+啟動: meteor --port 4000
+客戶首頁: localhost:4000
+管理首頁: localhost:4000/adminLogin

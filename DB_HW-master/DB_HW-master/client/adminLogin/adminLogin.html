@@ -1,0 +1,192 @@
+<head>
+    <title>DB_HW_GROUP9</title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px
+        }
+        .a{
+            list-style-type:none;        
+            padding:0px;
+            overflow:hidden;
+            background-color:#FF6100;
+            vertical-align: top;
+        }
+        .bot_info{
+            background-color:black;
+            color: white;
+            position: absolute;
+            bottom: 0;
+            padding: 10px;
+            width: 100%;  
+        }
+  
+        .b{
+            float:left;	
+        }
+  
+        .c{ 
+            display:block;
+            color:white;
+            text-align:center;
+            padding:20px;
+            text-decoration:none;
+            margin: 0px;
+        }
+  
+        li a:hover{
+            background:rgb(255,230,0);
+            padding:20px;
+        }
+  
+        .up_title{
+            font-family:Georgia, 'Times New Roman', Times, serif, Microsoft JhengHei;
+            height: 6%;
+            background-color: white;
+            padding: 50px;
+            text-align: center;
+            font-size: 30px;
+        }
+        .middle_box{ 
+            height: 500px;
+            padding: 0px;
+            background-color: #FDF5E6;
+        }
+        .mid_mid_box{
+            float: left;
+            width: 90%;
+            height: 3px;
+            font-size: 13px;
+            line-height: 30px;
+            text-align: justify;
+            padding-bottom: 100px;
+            vertical-align: top;
+            margin-left: 70px;
+            margin-top: 35px;
+            font-family:Microsoft JhengHei;
+        }
+        .mid_mid_mid_box{
+            float: left;
+            width: 90%;
+            height: 40px;
+            margin-top: 10px;
+            margin-left: 20%;
+            padding-bottom: 20px;
+            padding-right: 2%;
+            padding-left: 1%;
+            font-size: 23px;
+            font-family: Oswald,sans-serif,Microsoft JhengHei;
+            line-height: 80px;
+        }
+        .inputbox_text{
+            width: 60%;
+            font-size: 14px;
+            line-height: 38px;
+            color: #666;
+            height: 45px;
+            border: 1px solid #CCC;
+            border-radius: 5px;
+            padding-right: 2%;
+            padding-left: 2%;
+            margin-left: 20%;
+            background-color: #FFFAF0;
+        }
+        .submission_buttom{
+            float: left;
+            width: 150px;
+            height: 30px;
+            background-color: #FFD700;
+            margin-top: 20px;
+            margin-left: 20%;
+            padding-right: 40px;
+            padding-left: 40px;
+            padding-top: 12px;
+            padding-bottom: 28px; 
+            text-align: center;
+            border-radius: 20px;
+            font-size:18px;
+            font-family:標楷體;
+        }
+        .submission_buttom a{
+            font-size: 22px;
+            text-align: center;
+            font-family: cursive;
+            text-decoration: none;
+            text-align: center;
+            color:black;	
+        }
+        .p{ 
+	    	font-size: 12;
+	    	color:white;
+        }
+    
+        .bot_info{
+            background-color:#FF6100;
+            color: white;  
+	    	position: absolute;
+	    	top: 580px;
+	    	padding: 40px;
+	    	height: 15%;
+	    	width: 100%;
+        }
+
+        .bottomm{
+	    	background-color:black;
+	    	color: white;
+	    	position: absolute;
+	    	top: 680px;
+	    	padding: 20px;
+	    	height: 10px;
+	    	width: 100%;
+	    	text-align: center;
+	    }
+      </style>
+  </head>
+  
+  <body>
+  
+    
+  </body>
+  
+<template name="adminLogin">
+    <div>
+		<ul class="a">
+		  <li class="b"><a href="http://localhost/Homepage.html" class="c">Home</a></li>
+		  <li class="b"><a href="https://news.google.com/topstories?hl=zh-TW&tab=rn&gl=TW&ceid=TW:zh-Hant" class="c">News</a></li>
+          <li class="b"><a href="http://localhost/about.html" class="c">About</a></li>
+		</ul>
+    </div>
+     <div class="up_title">The Roft 管理員登入</div>
+    <form class="login-form">
+        <div class="middle_box" style="height: 500px;">
+            <div class="mid_mid_box">
+              <div class="mid_mid_mid_box">管理員帳號</div>
+              <input type="text" name="username" class="inputbox_text" placeholder="username" value=""><br>
+            </div>
+            <div class="mid_mid_box" >
+              <div class="mid_mid_mid_box">管理員密碼</div>
+              <input type="password" name="password" class="inputbox_text" placeholder="password" value=""><br>
+            </div>
+            <div class="mid_mid_box" >
+              <input class="submission_buttom" type="submit" name="button" value="確認登入" />
+            </div>
+          </div>
+    </form>
+
+    <div class="bot_info" style="background-color:#FF6100;top: 580px;">
+		<pre><span style="font-family: Comic Sans MS, Microsoft JhengHei;"><table width="650">
+		    <tr>
+			  <td>         </td>
+			  <td><a href="https://www.tasty.com.tw/index.html" target="_blank" class="p">西堤牛排</a></td>
+			  <td><a href="https://www.wangsteak.com.tw/" target="_blank" class="p">王品牛排</a></td>
+			  <td><a href="https://www.tokiya.com.tw/" target="_blank" class="p">陶板屋和風創作料理</a></td>
+			  <td><a href="https://www.yakiyan.com/" target="_blank" class="p">原燒 YAKIYAN</a></td>
+			</tr></table>                想給我們意見、想與我們合作，歡迎聯絡我們!         服務專線: 0800-080-128
+		門市地址: 新竹市大學路1001號                               營業時間: 11:30~14:30 (最後點餐時間14:00)17:30~22:00(最後點餐時間21:00)</span>
+		</pre>
+  </div>
+  
+  <div class="bottomm" style="top:710px;">
+    Copyright © The Roft. All Rights Reserved.
+  </div>
+</template>

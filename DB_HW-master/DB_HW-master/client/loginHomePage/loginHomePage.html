@@ -1,0 +1,83 @@
+<template name="loginHomePage">
+  <div id="loginHomePage_topRegion">
+      <h2>The Roft 使用者介面</h2>
+      <button id="loginHomePage_viewMeal" class="title-inline funcbut">菜單總覽</button>
+      <button id="loginHomePage_myOrders" class="title-inline funcbut">我的訂單</button>
+      <button id="loginHomePage_myData" class="title-inline funcbut">個人資料</button>
+      <button id="loginHomePage_logOut" class="title-inline funcbut">登出</button>
+    </div>
+    <div id="loginHomePage_descRegion">
+      <div id="descRegion_viewMeal">
+        <table id="viewMeal_table" width="100%" height="950" border="1">
+          <tr>
+            <th align="center">順序</th>
+            <th align="center">品項</th>
+            <th align="center">品項介紹</th>
+            <th align="center">價格(份)</th>
+            <th align="center">數量</th>
+            <th align="center">介紹圖片</th>
+          </tr>
+          {{#each showAllMeal}} {{> loginHomePage_viewMeal}} {{/each}}
+        </table>
+        <button id="viewMeal_refresh" class="descbut">更新菜單</button>
+        <button id="viewMeal_sendOrder" class="descbut">確認送出訂單</button>
+      </div>
+      <div id="descRegion_myOrders">
+        <table id="myOrders_table" width="100%" border="1">
+          <tr>
+            <th align="center">訂單日期</th>
+            <th align="center">訂單詳細</th>
+            <th align="center">訂單總價</th>
+            <th align="center">狀態</th>
+            <th align="center">付款</th>
+            <th align="center">操作</th>
+          </tr>
+          {{#each showAllOrder}} {{> loginHomePage_myOrders}} {{/each}}
+        </table>
+        <button id="myOrders_refresh" class="descbut">更新訂單</button>
+      </div>
+      <div id="descRegion_myData">
+        <table id="myData_table">
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>
+              用戶姓名：
+            </td>
+            <td>
+              {{userInfo.name}}
+            </td>
+            <td>
+              <button id="myData_table_modifyName" class="listbut">修改姓名</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              用戶電話：
+            </td>
+            <td>
+              {{userInfo.userPhone}}
+            </td>
+            <td>
+              <button id="myData_table_modifyPhone" class="listbut">修改電話</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              電子郵件：
+            </td>
+            <td>
+              {{userInfo.email}}
+            </td>
+            <td>
+              <button id="myData_table_modifyEmail" class="listbut">修改電子郵件</button>
+            </td>
+          </tr>
+        </table>
+        <button id="myData_modifyPass" class="descbut">修改密碼</button>
+      </div>
+    </div>
+</template>
